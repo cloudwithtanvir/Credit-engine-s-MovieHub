@@ -1,8 +1,8 @@
-import { Button, Card, Divider, Input, List, Tag } from 'antd'
-import moment from 'moment'
+import { Button,  Divider, Input, List, Tag } from 'antd'
 import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
+import MovieCard from '../components/movie-card'
 import { fetchMovies, searchMovies, selectMoviesState } from '../redux/slices/moviesSlice'
 import styles from './home.module.css'
 
@@ -20,15 +20,6 @@ const HomePage = () => {
 		dispatch(fetchMovies())
 	}, [dispatch])
 
-	const getPoster = (path) => {
-		return <img
-			style={{
-				objectFit: 'contain'
-			}}
-			alt='...'
-			src={`https://image.tmdb.org//t/p/w300${path}`}
-		/>
-	}
 
 	const onPageChange = page => {
 		if (searchTerm) {
@@ -47,7 +38,7 @@ const HomePage = () => {
 		setIsSearchApplied(false)
 		dispatch(fetchMovies())
 	}
-	console.log(movies)
+
 	return (
 		<div className={styles.homePage}>
 			<div className={styles.container}>
@@ -89,10 +80,10 @@ const HomePage = () => {
 					grid={{
 						gutter: 16,
 						xs: 1,
-						sm: 2,
+						sm: 1,
 						md: 2,
-						lg: 3,
-						xl: 4,
+						lg: 2,
+						xl: 3,
 						xxl: 4,
 						}}
 					pagination={{
@@ -104,16 +95,7 @@ const HomePage = () => {
 					dataSource={movies}
 					renderItem={item => (
 						<List.Item>
-							<Card
-								hoverable={true}
-								style={{ width: '300px'}}
-								cover={getPoster(item.poster_path)}
-							>
-								<Card.Meta
-									title={item.title}
-									description={moment(item.release_date).format("MMM DD, YYYY")}
-								/>
-							</Card>
+							<MovieCard movie={item} />
 						</List.Item>
 					)}
 				/>

@@ -3,13 +3,14 @@ This project has developed as a part of recruiting steps of the company of "cred
 
 
 #### features implemented:
-  * Search the movies
-  * implementated the pagination
-  * Calling the open Movie api from <https://api.themoviedb.org>
-  * Dockerize the project
-  * add css for a source
-  * add global css
-  * Deployemnt to aws 
+- [x] Search the movies
+- [x] implementated the pagination
+- [x] Showing movie details
+- [x] Calling the open Movie api from <https://api.themoviedb.org>
+- [ ] Dockerize the project
+ -[x] add css for a source
+- [x] add global css
+- [x] Deployemnt to aws 
 
 
 

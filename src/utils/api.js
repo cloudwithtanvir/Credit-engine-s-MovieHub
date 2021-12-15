@@ -24,7 +24,20 @@ const searchMovies = ({ page, searchTerm }) => {
 	})
 }
 
+const getMovieDetail = (id) => {
+	return api.get(`/movie/${id}`)
+}
+const getSimilarMovies = (id, page) => {
+	return api.get(`/movie/${id}/similar`, {
+		params: {
+			page,
+		},
+	})
+}
+
 export const API = {
 	getPopularMovies,
 	searchMovies,
+	getMovieDetail,
+	getSimilarMovies,
 }
