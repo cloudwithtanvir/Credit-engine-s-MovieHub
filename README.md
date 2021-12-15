@@ -1,5 +1,5 @@
 # Credit-engine-s-MovieHub
-This project has developed as a part of recruiting steps of the company of "credit engine". This  project will help to find the find the movies.
+This project has developed as a part of recruiting steps of the company of "credit engine". This  project will help to find the details about movies.
 
 
 #### features implemented:
@@ -10,7 +10,7 @@ This project has developed as a part of recruiting steps of the company of "cred
 - [ ] Dockerize the project
  -[x] add css for a source
 - [x] add global css
-- [x] Deployemnt to aws 
+- [x] Deployemnt [Netify](https://61ba366efd7af15ed65e2ebe--sad-golick-7a27af.netlify.app/)
 
 
 
